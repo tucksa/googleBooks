@@ -3,7 +3,7 @@ import Axios from 'axios';
 import './search.css';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-
+import Jumbotron from '../Jumbotron/jumbotron';
 
 class Search extends React.Component{
     state = {
@@ -67,6 +67,7 @@ class Search extends React.Component{
 
         return(
             <div>
+                <Jumbotron/>
                 <form className= 'mySearchBar' onSubmit= {this.handleSubmit}>
                     <div class="form-group">
                         <input onChange= {this.handleInput} class="form-control"  placeholder="Search for books here"/>
