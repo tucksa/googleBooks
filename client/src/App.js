@@ -15,9 +15,10 @@ function App() {
     <div className="App" style= {myBackgroung}>
       <Navbar/>
       <Jumbotron/>
+      <Route path = '/library' compenent= {libraryRoute}/>
       <Route exact path = '/' component= {homeRoute}/>
       <Route exact path = '/search' component= {homeRoute}/>
-      <Route path = '/library' compenent= {libraryRoute}/>
+      
     </div>
     </BrowserRouter>
 
