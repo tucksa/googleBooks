@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import homeRoute from './components/pages/routes/homeRoute';
-import libraryRoute from './components/pages/routes/libraryRoute';
+import Library from './components/pages/library';
 import Navbar from './components/Navbar/navbar';
 import { BrowserRouter, Route } from "react-router-dom";
 import Background from './images/white-waves.png'
@@ -15,7 +15,7 @@ function App() {
       <Navbar/>
       <Route exact path = '/' component= {homeRoute}/>
       <Route exact path = '/search' component= {homeRoute}/>
-      <Route exact path = '/library' compenent= {libraryRoute}/>
+      <Route exact path = '/library' compenent= {Library}/>
     </div>
     </BrowserRouter>
 
