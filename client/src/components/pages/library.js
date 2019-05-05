@@ -3,7 +3,6 @@ import Axios from 'axios';
 import './search.css';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import {BrowserRouter} from 'react-router-dom';
 
 class Library extends React.Component{
     state = {
@@ -52,9 +51,7 @@ class Library extends React.Component{
 
         return(
             <div>
-                <BrowserRouter>
                 {libresults}
-                </BrowserRouter>
                 <button>Hello???</button>
             </div>
         )

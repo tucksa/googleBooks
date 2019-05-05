@@ -3,7 +3,7 @@ import Axios from 'axios';
 import './search.css';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import {BrowserRouter} from 'react-router-dom';
+
 
 class Search extends React.Component{
     state = {
@@ -73,9 +73,8 @@ class Search extends React.Component{
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
-                <BrowserRouter>
+
                     {results}
-                </BrowserRouter>  
             </div>
         )
     }
