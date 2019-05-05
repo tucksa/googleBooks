@@ -13,10 +13,6 @@ const bookSchema = new Schema({
     description: { type: String },
     image: { type: String },
     link: { type: String },
-    isSaved: {
-        type: Boolean,
-        default: false
-    },
     date: {
         type: Date,
         default: Date.now
