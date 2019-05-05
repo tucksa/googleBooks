@@ -1,25 +1,25 @@
 import React from 'react';
 import './App.css';
-import Home from './components/pages/search';
+import homeRoute from './components/pages/routes/homeRoute';
 import Navbar from './components/Navbar/navbar';
 import Jumbotron from './components/Jumbotron/jumbotron';
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import Library from './components/pages/library';
+import { BrowserRouter, Route } from "react-router-dom";
+import libraryRoute from './components/pages/routes/libraryRoute';
 import Background from './images/white-waves.png'
 const myBackgroung = {
   backgroundImage: "url("+Background+")",
 }
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
     <div className="App" style= {myBackgroung}>
       <Navbar/>
       <Jumbotron/>
-      <Route exact path = '/' component= {Home}/>
-      <Route exact path = '/search' component= {Home}/>
-      <Route path = '/library' compenent= {Library}/>
+      <Route exact path = '/' component= {homeRoute}/>
+      <Route exact path = '/search' component= {homeRoute}/>
+      <Route path = '/library' compenent= {libraryRoute}/>
     </div>
-    </Router>
+    </BrowserRouter>
 
   );
 }
