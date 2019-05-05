@@ -17,27 +17,27 @@ class Library extends React.Component{
         Axios.get('/api/books')
         .then(res => {
             console.log(res)
-            let title = [];
-            let authors= [];
-            let description= [];
-            let image = [];
-            let link= [];
-            let id= [];
-            for(let i=0; i<res.length; i++){
-                title.push(res[i].title)
-                authors.push(res[i].authors)
-                description.push(res[i].description)
-                image.push(res[i].image)
-                link.push(res[i].link)
-                id.push(res[i]._id)
-            } 
-                this.setState({
-                    title,
-                    description,
-                    image,
-                    link,
-                    id
-                })
+            // let title = [];
+            // let authors= [];
+            // let description= [];
+            // let image = [];
+            // let link= [];
+            // let id= [];
+            // for(let i=0; i<res.length; i++){
+            //     title.push(res[i].title)
+            //     authors.push(res[i].authors)
+            //     description.push(res[i].description)
+            //     image.push(res[i].image)
+            //     link.push(res[i].link)
+            //     id.push(res[i]._id)
+            // } 
+            //     this.setState({
+            //         title,
+            //         description,
+            //         image,
+            //         link,
+            //         id
+            //     })
         })
         .catch(err => console.log(err))
     }
@@ -48,12 +48,12 @@ class Library extends React.Component{
         .catch(err => console.log(err))
     }
     render(){
-        let results = this.state.title.map( (x,i) => <Row id= 'resDisplay' key = {i}><Col xs= {3}><img className= 'bookimg'alt= {`${this.state.title[i]} cover`}src= {this.state.image[i]}/></Col><Col xs = {7}><h4>{x}</h4><br /><br /><p>{this.state.description[i]}</p><br /><a href= {this.state.link[i]}> Read</a></Col><Col xs= {1}><button className= 'libSaveBtn btn btn-primary' onClick= {() => this.handleRemove(this.state.id)}>Remove</ button></Col></Row>)        
+        //let results = this.state.title.map( (x,i) => <Row id= 'resDisplay' key = {i}><Col xs= {3}><img className= 'bookimg'alt= {`${this.state.title[i]} cover`}src= {this.state.image[i]}/></Col><Col xs = {7}><h4>{x}</h4><br /><br /><p>{this.state.description[i]}</p><br /><a href= {this.state.link[i]}> Read</a></Col><Col xs= {1}><button className= 'libSaveBtn btn btn-primary' onClick= {() => this.handleRemove(this.state.id)}>Remove</ button></Col></Row>)        
 
         return(
             <div>
                 <button>This is a test to see if there's any connection</button>
-                {results}
+               
             </div>
         )
     }
