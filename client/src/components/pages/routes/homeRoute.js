@@ -1,10 +1,12 @@
 import React, { Fragment } from 'react';
 import Search from '../search';
+import Jumbotron from '../../Jumbotron/jumbotron';
 
 const homeRoute = () => {
     return (
       <Fragment>
-          <Search/>
+            <Jumbotron/>
+            <Search/>
       </Fragment>
     )
 }

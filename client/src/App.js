@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import homeRoute from './components/pages/routes/homeRoute';
 import Navbar from './components/Navbar/navbar';
-import Jumbotron from './components/Jumbotron/jumbotron';
 import { BrowserRouter, Route } from "react-router-dom";
 import libraryRoute from './components/pages/routes/libraryRoute';
 import Background from './images/white-waves.png'
@@ -14,11 +13,9 @@ function App() {
     <BrowserRouter>
     <div className="App" style= {myBackgroung}>
       <Navbar/>
-      <Jumbotron/>
       <Route path = '/library' compenent= {libraryRoute}/>
       <Route exact path = '/' component= {homeRoute}/>
       <Route exact path = '/search' component= {homeRoute}/>
-      
     </div>
     </BrowserRouter>
 
