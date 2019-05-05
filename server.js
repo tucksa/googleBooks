@@ -3,6 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const routes = require('./routes/apiBooks');
 const app = express();
+const path = require("path");
 const PORT = process.env.PORT || 3001;
 
 app.use(express.urlencoded({ extended: true }));
@@ -13,8 +14,11 @@ if(process.env.NODE_ENV === 'production'){
 }
 
 app.use(routes);
-
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/googleBooks')
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
+  
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/googleBooks', { useNewUrlParser: true })
     .then(() =>console.log('Mongoose is conntected'))
     .catch(err => console.log(err))
 

@@ -1,0 +1,16 @@
+.mySearchBar{
+    margin: 5%;
+}
+.bookimg{
+    height:175px;
+    width:125px;
+    margin-top: 10%
+}
+.libSaveBtn{
+    margin-top:25%
+}
+#resDisplay{
+    margin:2%;
+    border: 1px solid black;
+    padding:2%
+}

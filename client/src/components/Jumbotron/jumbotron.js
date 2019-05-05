@@ -1,5 +1,5 @@
 import React from 'react';
-import Background from '../../../images/books.jpg';
+import Background from '../../images/books.jpg';
 
 const myStyle = {
     backgroundImage: "url("+Background+")",
@@ -13,7 +13,7 @@ const myStyle = {
 const myText = {
     textAlign: "center",
     color: "white",
-    marginTop:"10%"
+    marginTop:"0"
 }
 
 function Jumbotron(){

@@ -1,12 +1,15 @@
 import React from 'react';
+import './navbar.css';
 import { Link } from 'react-router-dom';
 
 function Navbar(){
     return(
-        <nav>
-            <h1>Google Book Search</h1>
-            <Link to= '/search'>Search</Link>
-            <Link to= '/saved'>My Library</Link>
+        <nav className= 'myNav'>
+            <span className= 'title'>Google Book Search</span>
+            <span className='myLink'>
+            <Link className= 'link' to= '/search'>Search</Link>
+            <Link className= 'link' to= '/library'>My Library</Link>
+            </span>
         </nav>
     )
 }
