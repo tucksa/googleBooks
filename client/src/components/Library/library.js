@@ -52,6 +52,7 @@ class Library extends React.Component{
 
         return(
             <div>
+                <button>This is a test to see if there's any connection</button>
                 {results}
             </div>
         )
