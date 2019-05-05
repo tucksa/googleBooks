@@ -48,12 +48,12 @@ class Library extends React.Component{
         .catch(err => console.log(err))
     }
     render(){
-        let results = this.state.title.map( (x,i) => <Row id= 'resDisplay' key = {i}><Col xs= {3}><img className= 'bookimg'alt= {`${this.state.title[i]} cover`}src= {this.state.image[i]}/></Col><Col xs = {7}><h4>{x}</h4><br /><br /><p>{this.state.description[i]}</p><br /><a href= {this.state.link[i]}> Read</a></Col><Col xs= {1}><button className= 'libSaveBtn btn btn-primary' onClick= {() => this.handleRemove(this.state.id)}>Remove</ button></Col></Row>)        
+        let libresults = this.state.title.map( (x,i) => <Row id= 'resDisplay' key = {i}><Col xs= {3}><img className= 'bookimg'alt= {`${this.state.title[i]} cover`}src= {this.state.image[i]}/></Col><Col xs = {7}><h4>{x}</h4><br /><br /><p>{this.state.description[i]}</p><br /><a href= {this.state.link[i]}> Read</a></Col><Col xs= {1}><button className= 'libSaveBtn btn btn-primary' onClick= {() => this.handleRemove(this.state.id)}>Remove</ button></Col></Row>)        
 
         return(
             <div>
                 <BrowserRouter>
-                {results}
+                {libresults}
                 </BrowserRouter>
                 <button>Hello???</button>
             </div>
