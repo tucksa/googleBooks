@@ -14,7 +14,7 @@ class Library extends React.Component{
         link: [],
         id : []
     }
-    componentDidMount(){
+    componentWillMount(){
         Axios.get('/api/books')
         .then(res => {
             console.log(res)
@@ -32,7 +32,6 @@ class Library extends React.Component{
                 link.push(res[i].link)
                 id.push(res[i]._id)
             } 
-                console.log(image)
                 this.setState({
                     title,
                     authors,
