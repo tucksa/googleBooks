@@ -3,7 +3,7 @@ import Axios from 'axios';
 import './search.css';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-
+import {BrowserRouter} from 'react-router-dom';
 
 class Library extends React.Component{
     state = {
@@ -52,8 +52,10 @@ class Library extends React.Component{
 
         return(
             <div>
-                <button>This is a test to see if there's any connection</button>
+                <BrowserRouter>
                 {results}
+                </BrowserRouter>
+              
             </div>
         )
     }
