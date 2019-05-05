@@ -1,6 +1,6 @@
 import React from 'react';
 import Axios from 'axios';
-import '../Search/search.css';
+import './search.css';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 

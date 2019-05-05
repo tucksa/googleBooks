@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import Home from './components/Search/search';
+import Home from './components/pages/search';
 import Navbar from './components/Navbar/navbar';
 import Jumbotron from './components/Jumbotron/jumbotron';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Library from './components/Library/library';
+import Library from './components/pages/library';
 import Background from './images/white-waves.png'
 const myBackgroung = {
   backgroundImage: "url("+Background+")",
